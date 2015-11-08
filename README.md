@@ -13,3 +13,11 @@ You are welcome to take my ebuilds from here and do absolutely anything
 you want with them. After all, they are just some scripts for building stuff
 with a particular distribution's tools.
 
+## Adding with Layman
+
+To add this overlay to your Gentoo system using Layman, do the following:
+
+```
+layman -o https://raw.githubusercontent.com/tajjada/overlay/master/layman-metadata.xml -a TAJJADA
+```
+
