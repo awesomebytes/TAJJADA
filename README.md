@@ -18,6 +18,6 @@ with a particular distribution's tools.
 To add this overlay to your Gentoo system using Layman, do the following:
 
 ```
-layman -o https://raw.githubusercontent.com/tajjada/overlay/master/layman-metadata.xml -a TAJJADA
+layman -f -o https://raw.githubusercontent.com/tajjada/overlay/master/layman-metadata.xml -a TAJJADA
 ```
 
