@@ -21,6 +21,7 @@ SLOT="0"
 CDEPEND="net-dialup/picocom
 		dev-embedded/arduino
 		dev-embedded/avrdude
+		dev-python/jinja
 		dev-python/configobj
 		dev-python/glob2
 		dev-python/pyserial"
