@@ -24,4 +24,5 @@ src_unpack() {
 
 src_install() {
 	tar -xpjf "${S}/Linux_for_Tegra/nv_tegra/nvidia_drivers.tbz2" -C "${D}"
+	rm "${D}/usr/lib/xorg/modules/extensions/libglx.so"
 }
