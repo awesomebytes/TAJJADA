@@ -17,8 +17,6 @@ SLOT="0"
 EBZR_REPO_URI="lp:kicad"
 EBZR_REVISION=""
 
-KEYWORDS=""
-
 IUSE="dev-doc debug doc examples python nanometr gost sexpr github"
 
 LANGS="bg ca cs de el_GR en es fi fr hu it ja ko nl pl pt ru sl sv zh_CN"
