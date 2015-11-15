@@ -3,7 +3,7 @@
 ## app-misc/fsltag
 
 This ebuild is for my fsltag utility. It is a program I have written to manage
-collections of files (such as images saved from the internet) using tags,
+collections of files (such as images saved from the Internet) using tags,
 without needing any sort of special file format to store the tags. Instead of
 the tags being stored in some sort of database, or embedded into the files,
 they are regular filesystem directories containing symlinks to the files.
@@ -12,14 +12,14 @@ I created this ebuild, because "fsltag" is a program I made. I use it myself.
 
 ## dev-embedded/arduino
 
-This ebuild is a modified version of the one in gentoo portage. It adds the
+This ebuild is a modified version of the one in Gentoo portage. It adds the
 "minimal" use flag, which allows only the libraries / headers / platforms for
 Arduino boards to be installed. This avoids the (crappy imo) Arduino IDE/editor
-app, which depends on java. This ebuild is great if you use something else to
+app, which depends on Java. This ebuild is great if you use something else to
 develop for Arduino (e.g the "ino" commandline suite with a proper editor (like
-vim)), and do not want to pull in java on your system.
+vim)), and do not want to pull in Java on your system.
 
-I created this ebuild, because I don't want to have java on my system, and,
+I created this ebuild, because I don't want to have Java on my system, and,
 since I use "dev-embedded/ino" for my Arduino development needs, I don't need
 the crappy Arduino IDE app anyway.
 
@@ -28,11 +28,11 @@ the crappy Arduino IDE app anyway.
 This ebuild is for "ino", the commandline Arduino development tool. With this
 tool, you can have a sane way of developing for Arduino, with a sane toolchain
 based on Makefiles. This way, you can develop your code using any editor, just
-like for any other program, and can avoid the crappy Arduino IDE (and its java
+like for any other program, and can avoid the crappy Arduino IDE (and its Java
 dependencies).
 
 I created this ebuild, because I use this tool, and it was not available in the
-gentoo portage repo.
+Gentoo portage repo.
 
 ## dev-python/glob2
 
@@ -40,15 +40,15 @@ This ebuild is for the glob2 python library, which is an enhanced version of
 the globbing functionality found in python itself.
 
 I created this ebuild, because "dev-embedded/ino" depends on it, and it was not
-available in the gentoo portage repo.
+available in the Gentoo portage repo.
 
-## sci-electronics/kicad
+## sci-electronics/KiCAD
 
-This ebuild is for the latest bzr version of kicad. It is based on existing
-ebuilds found in other overlays, but updated to be compatible with new kicad
+This ebuild is for the latest bzr version of KiCAD. It is based on existing
+ebuilds found in other overlays, but updated to be compatible with new KiCAD
 versions (dependencies have changed and those other ebuilds no longer work).
 This ebuild also uses the system-installed boost libraries rather than the
-ones bundled with the kicad distribution (which are not compatible with GCC5).
+ones bundled with the KiCAD distribution (which are not compatible with GCC5).
 
 It does **not** install component libraries. You should get those separately.
 The "github" USE flag could be useful for this.
