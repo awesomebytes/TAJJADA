@@ -15,9 +15,11 @@ with a particular distribution's tools.
 
 ## Adding with Layman
 
-To add this overlay to your Gentoo system using Layman, do the following:
+This overlay has now been added to layman's list of overlays.
+
+You can now add it like any other overlay from there:
 
 ```
-layman -f -o https://raw.githubusercontent.com/tajjada/overlay/master/layman-metadata.xml -a TAJJADA
+layman -a TAJJADA
 ```
 
