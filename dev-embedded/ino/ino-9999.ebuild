@@ -18,14 +18,16 @@ inherit git-r3
 LICENSE="MIT"
 SLOT="0"
 
-CDEPEND="net-dialup/picocom
+CDEPEND="${PYTHON_DEPS}
+		net-dialup/picocom
 		dev-embedded/arduino
 		dev-embedded/avrdude
-		dev-python/jinja
-		dev-python/configobj
-		dev-python/glob2
-		dev-python/pyserial"
+		dev-python/jinja[${PYTHON_USEDEP}]
+		dev-python/configobj[${PYTHON_USEDEP}]
+		dev-python/glob2[${PYTHON_USEDEP}]
+		dev-python/pyserial[${PYTHON_USEDEP}]"
 DEPEND="${CDEPEND}"
 RDEPEND="${CDEPEND}"
 
+REQUIRED_USE="${PYTHON_REQUIRED_USE}"
 
