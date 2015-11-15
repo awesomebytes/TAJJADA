@@ -13,8 +13,10 @@ SLOT="0"
 KEYWORDS="-* ~arm"
 IUSE=""
 
-DEPEND=""
-RDEPEND="${DEPEND}"
+CDEPEND="app-eselect/eselect-opengl
+		<x11-base/xorg-server-1.17.99:="
+DEPEND="${CDEPEND}"
+RDEPEND="${CDEPEND}"
 
 src_unpack() {
 	default
@@ -67,3 +69,16 @@ src_install() {
 	mkdir -p "${D}/lib/udev/rules.d/"
 	cp "${WORKDIR}/${TEGRA_UDEV_RULES}" "${D}/lib/udev/rules.d/"
 }
+
+pkg_postinst() {
+	"${ROOT}"/usr/bin/eselect opengl set linux4tegra
+}
+
+pkg_prerm() {
+	"${ROOT}"/usr/bin/eselect opengl set --use-old xorg-x11
+}
+
+pkg_postrm() {
+	"${ROOT}"/usr/bin/eselect opengl set --use-old xorg-x11
+}
+
