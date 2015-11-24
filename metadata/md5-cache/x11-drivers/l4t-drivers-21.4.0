@@ -1,0 +1,12 @@
+DEFINED_PHASES=compile install postinst postrm prerm unpack
+DEPEND=app-eselect/eselect-opengl <x11-base/xorg-server-1.17.99:=
+DESCRIPTION=NVIDIA Linux4Tegra Graphics Drivers (for Tegra K1 SoC).
+EAPI=5
+HOMEPAGE=https://developer.nvidia.com/embedded/linux-tegra
+KEYWORDS=-* ~arm
+LICENSE=NVIDIA_TEGRA
+RDEPEND=app-eselect/eselect-opengl <x11-base/xorg-server-1.17.99:=
+SLOT=0
+SRC_URI=http://developer.download.nvidia.com/embedded/L4T/r21_Release_v4.0/Tegra124_Linux_R21.4.0_armhf.tbz2
+_eclass_exported_funcs=pkg_prerm:- pkg_postrm:- pkg_postinst:- src_unpack:- src_compile:- src_install:-
+_md5_=2517fb0720b689abd00a4a992f010954
