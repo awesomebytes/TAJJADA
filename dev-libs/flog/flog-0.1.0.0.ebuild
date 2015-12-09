@@ -4,7 +4,7 @@
 
 EAPI=5
 
-DESCRIPTION="The Flexible C++11 Message Logging Library"
+DESCRIPTION="The Flexible/Functional Message Logging Library for C"
 HOMEPAGE="https://github.com/tajjada/flog"
 SRC_URI="https://github.com/tajjada/flog/archive/v${PV}.tar.gz"
 
