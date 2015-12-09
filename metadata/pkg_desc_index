@@ -1,7 +1,7 @@
 app-misc/fsltag 9999: A filesystem-based file tagging program.
 dev-embedded/arduino 1.0.5-r1: An open-source AVR electronics prototyping platform
 dev-embedded/ino 9999: Commandline utilities for Arduino development.
-dev-libs/flog 0.2.0.1: The Flexible C++11 Message Logging Library
+dev-libs/flog 0.1.0.0: The Flexible/Functional Message Logging Library for C
 dev-python/glob2 9999: Extended version of Python's builtin glob module.
 sci-electronics/kicad 999999999: Electronic Schematic and PCB design tools.
 x11-drivers/l4t-drivers 21.4.0: NVIDIA Linux4Tegra Graphics Drivers (for Tegra K1 SoC).

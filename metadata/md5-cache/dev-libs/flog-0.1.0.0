@@ -1,0 +1,11 @@
+DEFINED_PHASES=compile install
+DESCRIPTION=The Flexible/Functional Message Logging Library for C
+EAPI=5
+HOMEPAGE=https://github.com/tajjada/flog
+IUSE=static-libs
+KEYWORDS=~amd64
+LICENSE=ZLIB
+SLOT=0.1
+SRC_URI=https://github.com/tajjada/flog/archive/v0.1.0.0.tar.gz
+_eclass_exported_funcs=src_compile:- src_install:-
+_md5_=ed4f5f786bf6e5e11a5b857de344658b
