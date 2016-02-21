@@ -15,8 +15,9 @@ SLOT="0"
 KEYWORDS=""
 IUSE="+experimental"
 
-DEPEND=""
-RDEPEND="${DEPEND}"
+CDEPEND="sys-block/parted"
+DEPEND="${CDEPEND}"
+RDEPEND="${CDEPEND}"
 
 src_compile() {
 	export CFLAGS="${CFLAGS} -fgnu89-inline"
