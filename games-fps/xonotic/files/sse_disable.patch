@@ -1,0 +1,37 @@
+--- source/darkplaces/makefile.inc.old	2016-02-26 05:06:28.724155234 +0000
++++ source/darkplaces/makefile.inc	2016-02-26 05:10:44.614292927 +0000
+@@ -124,7 +124,6 @@
+ 	matrixlib.o \
+ 	mdfour.o \
+ 	meshqueue.o \
+-	mod_skeletal_animatevertices_sse.o \
+ 	mod_skeletal_animatevertices_generic.o \
+ 	model_alias.o \
+ 	model_brush.o \
+@@ -181,9 +180,6 @@
+ CFLAGS_RELEASE_PROFILE=-fbranch-probabilities
+ CFLAGS_SDL=$(SDLCONFIG_CFLAGS)
+ 
+-CFLAGS_SSE=-msse
+-CFLAGS_SSE2=-msse2
+-
+ OPTIM_DEBUG=$(CPUOPTIMIZATIONS)
+ #OPTIM_RELEASE=-O2 -fno-strict-aliasing -ffast-math -funroll-loops $(CPUOPTIMIZATIONS)
+ #OPTIM_RELEASE=-O2 -fno-strict-aliasing -fno-math-errno -fno-trapping-math -ffinite-math-only -fno-signaling-nans -fcx-limited-range -funroll-loops $(CPUOPTIMIZATIONS)
+@@ -535,13 +531,13 @@
+ 	$(CHECKLEVEL2)
+ 	$(DO_CC) $(CFLAGS_CRYPTO) $(CFLAGS_CRYPTO_RIJNDAEL)
+ 
+-mod_skeletal_animatevertices_sse.o: mod_skeletal_animatevertices_sse.c
++mod_skeletal_animatevertices_generic.o: mod_skeletal_animatevertices_generic.c
+ 	$(CHECKLEVEL2)
+-	$(DO_CC) $(CFLAGS_SSE)
++	$(DO_CC)
+ 
+ dpsoftrast.o: dpsoftrast.c
+ 	$(CHECKLEVEL2)
+-	$(DO_CC) $(CFLAGS_SSE2)
++	$(DO_CC)
+ 
+ darkplaces.o: %.o : %.rc
+ 	$(CHECKLEVEL2)
