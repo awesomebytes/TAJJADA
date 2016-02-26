@@ -26,5 +26,5 @@ src_install() {
 
 	insinto "/usr/share/arduino/"
 	doins -r hardware libraries
-	fowners -R root:uucp "/usr/share/${PN}/hardware"
+	fowners -R root:uucp "/usr/share/arduino/hardware"
 }
