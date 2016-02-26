@@ -9,7 +9,8 @@ HOMEPAGE="https://github.com/tajjada/flog"
 SRC_URI="https://github.com/tajjada/flog/archive/v${PV}.tar.gz"
 
 LICENSE="ZLIB"
-SLOT="${PV:0:3}"
+#SLOT="${PV:0:3}"
+SLOT="0"
 KEYWORDS="~amd64"
 IUSE="static-libs"
 
@@ -18,13 +19,12 @@ RDEPEND=""
 
 src_compile() {
 	if use static-libs; then
-		make all
+		emake all
 	else
-		make shared
+		emake shared
 	fi
 }
 
 src_install() {
 	make PREFIX=${D}/usr install
-	ln -s "libflog.so.${PV}" "${D}/usr/lib/libflog.so.${SLOT}"
 }
