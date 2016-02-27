@@ -13,7 +13,7 @@ SRC_URI="http://dl.xonotic.org/${P}.zip"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="amd64 x86"
+KEYWORDS="amd64 x86 ~arm"
 IUSE="alsa debug dedicated doc ode sdl cpu_flags_x86_sse2"
 
 UIRDEPEND="
