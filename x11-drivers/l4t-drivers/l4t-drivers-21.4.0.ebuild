@@ -54,8 +54,6 @@ src_compile() {
 	mkdir -p "${I}/usr/lib/opengl/linux4tegra"
 	## Move driver libraries there.
 	mv "${I}/usr/lib/arm-linux-gnueabihf/tegra" "${I}/usr/lib/opengl/linux4tegra/lib"
-	## Make symlink for libGL.so
-	ln -s "${I}/usr/lib/opengl/linux4tegra/lib/libGL.so.1" "${I}/usr/lib/opengl/linux4tegra/lib/libGL.so"
 	## Move Xorg GLX module.
 	mv "${I}/usr/lib/xorg/modules/extensions" "${I}/usr/lib/opengl/linux4tegra/"
 	## Move EGL/GLES libraries.
@@ -68,6 +66,11 @@ src_install() {
 	rsync -aX "${S}/inst/" "${D}/"
 	mkdir -p "${D}/lib/udev/rules.d/"
 	cp "${WORKDIR}/${TEGRA_UDEV_RULES}" "${D}/lib/udev/rules.d/"
+	## Make symlink for libGL.so
+	ln -s "${D}/usr/lib/opengl/linux4tegra/lib/libGL.so.1" "${D}/usr/lib/opengl/linux4tegra/lib/libGL.so"
+	## Fix GLX.
+	rm "${D}/usr/lib/opengl/linux4tegra/extensions/libglx.so"
+	ln -s "${D}/usr/lib/opengl/linux4tegra/lib/libglx.so" "${D}/usr/lib/opengl/linux4tegra/extensions/libglx.so"
 }
 
 pkg_postinst() {
