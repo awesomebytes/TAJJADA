@@ -31,3 +31,13 @@ RDEPEND="${CDEPEND}"
 
 REQUIRED_USE="${PYTHON_REQUIRED_USE}"
 
+pkg_postinst() {
+	ewarn "ino has been abandoned/unsupported by the upstream developers"
+	ewarn "for years now, and has not been updated to support new versions"
+	ewarn "of Arduino. Most recent versions of Arduino will *NOT* work."
+    ewarn ""
+	ewarn "You should try to use 'Arturo'/'ano' instead, which is a fork of"
+	ewarn "the original ino by another developer, to continue development, and"
+	ewarn "supports more recent versions of Arduino (up to 1.6.1), as available"
+	ewarn "in the TAJJADA overlay. An ebuild is available as 'dev-embedded/ano'."
+}
