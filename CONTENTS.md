@@ -23,6 +23,17 @@ they are regular filesystem directories containing symlinks to the files.
 
 I created this ebuild, because "fsltag" is a program I made. I use it myself.
 
+## dev-embedded/ano
+
+This ebuild is for "ano", a fork of the now-unsupported "ino", the commandline
+Arduino development tool. With this tool, you can have a sane way of developing
+for Arduino, with a sane toolchain based on Makefiles. This way, you can develop
+your code using any editor, just like for any other program, and can avoid the
+crappy Arduino IDE (and its Java dependencies).
+
+I created this ebuild, because I use this tool, and it was not available in the
+Gentoo portage repo.
+
 ## dev-embedded/arduino
 
 This ebuild is a modified version of the one in Gentoo portage. It adds the
