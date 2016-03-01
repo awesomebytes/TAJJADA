@@ -73,11 +73,6 @@ src_install() {
 	insinto "/usr/share/${PNS}/lib"
 	doins -r lib/*.txt lib/theme lib/*.png lib/*.bmp lib/*.key lib/*.so lib/*.ico lib/*.conf
 
-	# use system avrdude
-	# patching class files is too hard
-	dosym /usr/bin/avrdude "/usr/share/${PNS}/hardware/tools/avrdude"
-	dosym /etc/avrdude.conf "/usr/share/${PNS}/hardware/tools/avrdude.conf"
-
 	# install menu and icons
 	sed -e 's/Exec=FULL_PATH\/arduino/Exec=arduino/g' -i arduino.desktop
 	sed -e 's/Icon=FULL_PATH\/lib\/arduino.png/Icon=arduino/g' -i arduino.desktop

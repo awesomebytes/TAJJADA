@@ -27,4 +27,10 @@ src_install() {
 	insinto "/usr/share/arduino/"
 	doins -r hardware libraries
 	fowners -R root:uucp "/usr/share/arduino/hardware"
+
+	dosym /usr/bin/avrdude "/usr/share/arduino/hardware/tools/avrdude"
+	dosym /etc/avrdude.conf "/usr/share/arduino/hardware/tools/avrdude.conf"
+
+	mkdir -p "${D}/usr/share/arduino/hardware/tools/avr/etc/"
+	dosym /etc/avrdude.conf "/usr/share/arduino/hardware/tools/avr/etc/avrdude.conf"
 }
