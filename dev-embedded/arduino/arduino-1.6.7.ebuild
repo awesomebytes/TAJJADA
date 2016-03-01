@@ -37,6 +37,16 @@ pkg_postinst() {
 	elog "'crossdev -t avr' --> for the AVR-based Arduino boards, or"
 	elog "'crossdev -t arm-none-eabi' --> for ARM/SAM-based boards."
 
+	ewarn ""
+	ewarn "There is a bug with cross-binutils for AVR (bug #147155), which"
+	ewarn "can cause linker errors. Fortunately, there is an easy workaround:"
+	ewarn "You must create the following symlink manually on your system:"
+	ewarn "ln -s /usr/lib/binutils/avr/2.25.1/ldscripts /usr/avr/lib/ldscripts"
+	ewarn "replacing '2.25.1' with the correct version of cross-binutils"
+	ewarn "installed on your system. If you ever update or re-install the"
+	ewarn "cross-avr/binutils package on your system, you will need to"
+	ewarn "re-create the above symlink accordingly, or linker errors will occur."
+
 	if use minimal; then
 		elog ""
 		elog "You have emerged this package with the 'minimal' USE flag."
