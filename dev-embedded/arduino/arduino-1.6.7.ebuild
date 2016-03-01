@@ -34,8 +34,8 @@ src_install() {
 pkg_postinst() {
 	elog "To compile programs for Arduino, you need a cross-compiler."
 	elog "You can install one using the 'crossdev' tool, as follows:"
-	elog "'crossdev -t avr' --> for the AVR-based Arduino boards, or"
-	elog "'crossdev -t arm-none-eabi' --> for ARM/SAM-based boards."
+	elog "'crossdev -S -t avr' --> for the AVR-based Arduino boards, or"
+	elog "'crossdev -S -t arm-none-eabi' --> for ARM/SAM-based boards."
 
 	ewarn ""
 	ewarn "There is a bug with cross-binutils for AVR (bug #147155), which"
@@ -46,6 +46,11 @@ pkg_postinst() {
 	ewarn "installed on your system. If you ever update or re-install the"
 	ewarn "cross-avr/binutils package on your system, you will need to"
 	ewarn "re-create the above symlink accordingly, or linker errors will occur."
+
+	ewarn ""
+	ewarn "As of 2016-03-01, AVR-gcc-5.x does not seem to work. You should"
+	ewarn "install the stable (4.9.x) version of cross-gcc using the '-S'"
+	ewarn "option when invoking the 'crossdev' command."
 
 	if use minimal; then
 		elog ""
