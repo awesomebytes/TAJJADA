@@ -1,9 +1,9 @@
 app-admin/f3 9999: Fight Flash Fraud, or Fight Fake Flash
 app-misc/fsltag 9999: A filesystem-based file tagging program.
 dev-embedded/ano 9999: Commandline utilities for Arduino development. Updated fork of 'ino'.
-dev-embedded/arduino 1.6.1 1.6.7: An open-source AVR electronics prototyping platform
-dev-embedded/arduino-ide 1.6.1 1.6.7: An open-source AVR electronics prototyping platform
-dev-embedded/arduino-libs 1.6.1 1.6.7: An open-source AVR electronics prototyping platform
+dev-embedded/arduino 1.6.7: An open-source AVR electronics prototyping platform
+dev-embedded/arduino-ide 1.6.7: An open-source AVR electronics prototyping platform
+dev-embedded/arduino-libs 1.6.7: An open-source AVR electronics prototyping platform
 dev-embedded/ino 9999: Commandline utilities for Arduino development.
 dev-embedded/u-boot-tools 2015.07: utilities for working with Das U-Boot
 dev-libs/flog 0.1.1.1: The Flexible/Functional Message Logging Library for C
