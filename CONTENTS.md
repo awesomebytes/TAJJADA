@@ -115,6 +115,15 @@ sse/sse2, such as non-x86 architectures.
 
 I created this ebuild, because I wanted to play Xonotic on ARM systems/devices.
 
+## media-gfx/hqx
+
+hqx is an upscaling algorithm for pixel art, producing much better results (when
+used on pixel art) than other image resizing algorithms. Commonly used in various
+emulators for old consoles. This is a tool for applying it onto image files.
+
+I created this ebuild, because I want to use this tool and it was not available
+in Gentoo.
+
 ## x11-drivers/l4t-drivers
 
 This ebuild is for the NVIDIA Linux4Tegra drivers for graphics on the Tegra K1
