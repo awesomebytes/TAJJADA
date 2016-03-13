@@ -7,8 +7,11 @@ dev-embedded/arduino-libs 1.6.7: An open-source AVR electronics prototyping plat
 dev-embedded/ino 9999: Commandline utilities for Arduino development.
 dev-embedded/u-boot-tools 2015.07: utilities for working with Das U-Boot
 dev-libs/flog 0.1.1.1: The Flexible/Functional Message Logging Library for C
+dev-lua/cwrap 9999: cwrap helps generate Lua/C wrappers to interface with C functions.
 dev-python/glob2 9999: Extended version of Python's builtin glob module.
 games-fps/xonotic 0.8.1: Fork of Nexuiz, Deathmatch FPS based on DarkPlaces, an advanced Quake 1 engine
 media-gfx/hqx 1.1: hqx is a fast, high-quality magnification filter designed for pixel art.
+sci-libs/loadcaffe 9999: cwrap helps generate Lua/C wrappers to interface with C functions.
+sci-libs/torch 9999: cwrap helps generate Lua/C wrappers to interface with C functions.
 www-client/chromium 44.0.2403.89: Open-source version of Google Chrome web browser
 x11-drivers/l4t-drivers 21.4.0: NVIDIA Linux4Tegra Graphics Drivers (for Tegra K1 SoC).
