@@ -1,0 +1,11 @@
+DEFINED_PHASES=install
+DESCRIPTION=NVIDIA cuDNN GPU Accelerated Deep Learning
+EAPI=5
+HOMEPAGE=https://developer.nvidia.com/cuDNN
+KEYWORDS=~amd64 ~x86 ~amd64-linux ~x86-linux
+LICENSE=NVIDIA-cuDNN
+RESTRICT=fetch
+SLOT=0
+SRC_URI=cudnn-7.0-linux-x64-v4.0-prod.tgz
+_eclass_exported_funcs=src_install:-
+_md5_=13cebfe8292139805bbcf5f65bb39d97
