@@ -4,10 +4,10 @@
 
 EAPI=5
 
-DESCRIPTION="Torch is a Lua-based suite for scientific computations based on multidimensional tensors."
-HOMEPAGE="https://github.com/torch/torch7"
+DESCRIPTION="Paths manipulation library for Lua."
+HOMEPAGE="https://github.com/torch/paths"
 
-EGIT_REPO_URI="https://github.com/torch/torch7.git"
+EGIT_REPO_URI="https://github.com/torch/paths.git"
 
 inherit git-r3
 
@@ -20,14 +20,7 @@ inherit cmake-utils
 
 #FIXME: currently hard-code lua 5.1
 DEPEND=">=dev-lang/lua-5.1:=
-dev-lang/luajit
-virtual/blas
-virtual/lapack
-dev-lua/penlight
-dev-lua/lua-cjson
-dev-lua/torch-cwrap
-dev-lua/torch-paths
-sys-devel/gcc[fortran]"
+dev-lang/luajit:2"
 RDEPEND="${DEPEND}"
 
 src_configure() {
