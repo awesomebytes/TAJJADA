@@ -4,7 +4,7 @@
 
 EAPI=5
 
-DESCRIPTION="Torch is a Lua-based suite for scientific computations based on multidimensional tensors."
+DESCRIPTION="Torch FFI bindings for nvidia-cuda-cudnn."
 HOMEPAGE="https://github.com/torch/torch7"
 
 EGIT_REPO_URI="https://github.com/torch/torch7.git"
@@ -21,13 +21,8 @@ inherit cmake-utils
 #FIXME: currently hard-code lua 5.1
 DEPEND=">=dev-lang/lua-5.1:=
 dev-lang/luajit:2
-virtual/blas
-virtual/lapack
-dev-lua/penlight
-dev-lua/lua-cjson
-=dev-lua/torch-cwrap-9999
-=dev-lua/torch-paths-9999
-sys-devel/gcc[fortran]"
+=sci-libs/torch-9999
+>=dev-libs/nvidia-cuda-cudnn-7.0"
 RDEPEND="${DEPEND}"
 
 src_configure() {
