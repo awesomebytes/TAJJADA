@@ -4,10 +4,10 @@
 
 EAPI=5
 
-DESCRIPTION="Torch FFI bindings for nvidia-cuda-cudnn."
-HOMEPAGE="https://github.com/soumith/cudnn.torch"
+DESCRIPTION="Torch module for image processing."
+HOMEPAGE="https://github.com/torch/image"
 
-EGIT_REPO_URI="https://github.com/soumith/cudnn.torch.git"
+EGIT_REPO_URI="https://github.com/torch/image.git"
 
 inherit git-r3
 
@@ -21,8 +21,7 @@ inherit cmake-utils
 #FIXME: currently hard-code lua 5.1
 DEPEND=">=dev-lang/lua-5.1:=
 dev-lang/luajit:2
-=sci-libs/torch-9999
->=dev-libs/nvidia-cuda-cudnn-7.0"
+=sci-libs/torch-9999"
 RDEPEND="${DEPEND}"
 
 src_configure() {
@@ -40,7 +39,6 @@ src_configure() {
 	cmake-utils_src_configure
 }
 
-
 src_install() {
 	cmake-utils_src_install
 	mkdir -p "${D}"/usr/lib/lua/5.1 "${D}"/usr/share/lua/5.1
@@ -48,5 +46,4 @@ src_install() {
 	mv "${D}"/usr/lua/* "${D}"/usr/share/lua/5.1/
 	rm -rf "${D}"/usr/lua
 }
-
 
