@@ -8,4 +8,4 @@ RESTRICT=fetch
 SLOT=0
 SRC_URI=cudnn-7.0-linux-x64-v4.0-prod.tgz
 _eclass_exported_funcs=src_install:-
-_md5_=13cebfe8292139805bbcf5f65bb39d97
+_md5_=5ffd621f88efa2106643d2663c97b063
