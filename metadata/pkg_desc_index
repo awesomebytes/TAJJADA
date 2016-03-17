@@ -15,6 +15,7 @@ games-fps/xonotic 0.8.1: Fork of Nexuiz, Deathmatch FPS based on DarkPlaces, an 
 media-gfx/hqx 1.1: hqx is a fast, high-quality magnification filter designed for pixel art.
 sci-libs/loadcaffe 9999: cwrap helps generate Lua/C wrappers to interface with C functions.
 sci-libs/torch 9999: Torch is a Lua-based suite for scientific computations based on multidimensional tensors.
+sci-libs/torch-cudnn 9999: Torch FFI bindings for nvidia-cuda-cudnn.
 sci-misc/trepl 9999: TREPL is a command-line REPL for Torch.
 www-client/chromium 44.0.2403.89: Open-source version of Google Chrome web browser
 x11-drivers/l4t-drivers 21.4.0: NVIDIA Linux4Tegra Graphics Drivers (for Tegra K1 SoC).
