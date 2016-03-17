@@ -23,12 +23,17 @@ pkg_nofetch() {
 	einfo "from ${HOMEPAGE} and place them in ${DISTDIR}"
 }
 
+src_unpack() {
+	default
+	mv "${WORKDIR}/cuda" "${S}"
+}
+
 src_install() {
-	cd "${WORKDIR}/cuda"
+	cd "${S}"
 
 	pushd "lib64"
 
-	dolib.so libcudnn*$(get_libname)*
+	dolib.so libcudnn*.so*
 	dolib.a libcudnn_static.a
 
 	popd
