@@ -5,9 +5,9 @@
 EAPI=5
 
 DESCRIPTION="Torch FFI bindings for nvidia-cuda-cudnn."
-HOMEPAGE="https://github.com/torch/torch7"
+HOMEPAGE="https://github.com/soumith/cudnn.torch"
 
-EGIT_REPO_URI="https://github.com/torch/torch7.git"
+EGIT_REPO_URI="https://github.com/soumith/cudnn.torch.git"
 
 inherit git-r3
 
