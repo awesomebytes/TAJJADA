@@ -18,7 +18,7 @@ IUSE=""
 
 #FIXME: currently hard-code lua 5.1
 DEPEND=">=dev-lang/lua-5.1:=
-dev-lang/luajit
+dev-lang/luajit:2
 sys-libs/readline
 =sci-libs/torch-9999"
 RDEPEND="${DEPEND}"

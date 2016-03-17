@@ -20,7 +20,7 @@ inherit cmake-utils
 
 #FIXME: currently hard-code lua 5.1
 DEPEND=">=dev-lang/lua-5.1:=
-dev-lang/luajit
+dev-lang/luajit:2
 dev-libs/protobuf"
 RDEPEND="${DEPEND}"
 
