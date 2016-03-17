@@ -16,6 +16,7 @@ media-gfx/hqx 1.1: hqx is a fast, high-quality magnification filter designed for
 sci-libs/loadcaffe 9999: cwrap helps generate Lua/C wrappers to interface with C functions.
 sci-libs/torch 9999: Torch is a Lua-based suite for scientific computations based on multidimensional tensors.
 sci-libs/torch-cudnn 9999: Torch FFI bindings for nvidia-cuda-cudnn.
+sci-libs/torch-image 9999: Torch module for image processing.
 sci-libs/torch-nn 9999: Torch module for neural networks.
 sci-misc/trepl 9999: TREPL is a command-line REPL for Torch.
 www-client/chromium 44.0.2403.89: Open-source version of Google Chrome web browser
