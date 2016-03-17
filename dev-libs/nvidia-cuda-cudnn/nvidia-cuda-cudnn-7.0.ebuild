@@ -24,9 +24,19 @@ pkg_nofetch() {
 }
 
 src_install() {
+	cd "${WORKDIR}/cuda"
+
+	pushd "lib64"
+
 	dolib.so libcudnn*$(get_libname)*
 	dolib.a libcudnn_static.a
 
+	popd
+
+	pushd "include"
+
 	insinto /usr/include
 	doins cudnn.h
+
+	popd
 }
