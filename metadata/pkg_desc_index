@@ -18,6 +18,8 @@ sci-libs/torch 9999: Torch is a Lua-based suite for scientific computations base
 sci-libs/torch-cudnn 9999: Torch FFI bindings for nvidia-cuda-cudnn.
 sci-libs/torch-image 9999: Torch module for image processing.
 sci-libs/torch-nn 9999: Torch module for neural networks.
+sci-libs/torch-sys 9999: Torch module for system functions.
+sci-libs/torch-xlua 9999: Torch module for system functions.
 sci-misc/trepl 9999: TREPL is a command-line REPL for Torch.
 www-client/chromium 44.0.2403.89: Open-source version of Google Chrome web browser
 x11-drivers/l4t-drivers 21.4.0: NVIDIA Linux4Tegra Graphics Drivers (for Tegra K1 SoC).
