@@ -4,10 +4,10 @@
 
 EAPI=5
 
-DESCRIPTION="Torch module for CUDA."
-HOMEPAGE="https://github.com/torch/cutorch"
+DESCRIPTION="Torch module for CUDA Neural Networks."
+HOMEPAGE="https://github.com/torch/cunn"
 
-EGIT_REPO_URI="https://github.com/torch/cutorch.git"
+EGIT_REPO_URI="https://github.com/torch/cunn.git"
 
 inherit git-r3
 
@@ -43,7 +43,7 @@ src_configure() {
 src_install() {
 	cmake-utils_src_install
 	mkdir -p "${D}"/usr/lib/lua/5.1 "${D}"/usr/share/lua/5.1
-	#mv "${D}"/usr/lib/* "${D}"/usr/lib/lua/5.1/
+	mv "${D}"/usr/lib/* "${D}"/usr/lib/lua/5.1/
 	mv "${D}"/usr/lua/* "${D}"/usr/share/lua/5.1/
 	rm -rf "${D}"/usr/lua
 }
