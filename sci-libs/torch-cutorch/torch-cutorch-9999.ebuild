@@ -4,10 +4,10 @@
 
 EAPI=5
 
-DESCRIPTION="Torch module for optimisations."
-HOMEPAGE="https://github.com/torch/optim"
+DESCRIPTION="Torch module for CUDA."
+HOMEPAGE="https://github.com/torch/cutorch"
 
-EGIT_REPO_URI="https://github.com/torch/optim.git"
+EGIT_REPO_URI="https://github.com/torch/cutorch.git"
 
 inherit git-r3
 
@@ -21,7 +21,8 @@ inherit cmake-utils
 #FIXME: currently hard-code lua 5.1
 DEPEND=">=dev-lang/lua-5.1:=
 dev-lang/luajit:2
-=sci-libs/torch-9999"
+=sci-libs/torch-9999
+>=dev-util/nvidia-cuda-toolkit-7.0"
 RDEPEND="${DEPEND}"
 
 src_configure() {
