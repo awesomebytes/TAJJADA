@@ -4,39 +4,24 @@
 
 EAPI=5
 
-DESCRIPTION="Torch is a Lua-based suite for scientific computations based on multidimensional tensors."
-HOMEPAGE="https://github.com/torch/torch7"
+DESCRIPTION="Torch module for system functions."
+HOMEPAGE="https://github.com/torch/sys"
 
-EGIT_REPO_URI="https://github.com/torch/torch7.git"
+EGIT_REPO_URI="https://github.com/torch/sys.git"
 
 inherit git-r3
 
 LICENSE="BSD3"
 SLOT="0"
 KEYWORDS=""
-IUSE="minimal cuda"
+IUSE=""
 
 inherit cmake-utils
 
 #FIXME: currently hard-code lua 5.1
 DEPEND=">=dev-lang/lua-5.1:=
 dev-lang/luajit:2
-virtual/blas
-virtual/lapack
-dev-lua/penlight
-dev-lua/lua-cjson
-=dev-lua/torch-cwrap-9999
-=dev-lua/torch-paths-9999
-!minimal? (
-		=sci-libs/torch-image-9999
-		=sci-libs/torch-sys-9999
-		=sci-libs/torch-nn-9999
-		=sci-libs/torch-xlua-9999
-)
-cuda? (
-		=sci-libs/torch-cudnn-9999
-)
-sys-devel/gcc[fortran]"
+=sci-libs/torch-9999"
 RDEPEND="${DEPEND}"
 
 src_configure() {
@@ -54,5 +39,11 @@ src_configure() {
 	cmake-utils_src_configure
 }
 
-
+src_install() {
+	cmake-utils_src_install
+	mkdir -p "${D}"/usr/lib/lua/5.1 "${D}"/usr/share/lua/5.1
+	mv "${D}"/usr/lib/* "${D}"/usr/lib/lua/5.1/
+	mv "${D}"/usr/lua/* "${D}"/usr/share/lua/5.1/
+	rm -rf "${D}"/usr/lua
+}
 

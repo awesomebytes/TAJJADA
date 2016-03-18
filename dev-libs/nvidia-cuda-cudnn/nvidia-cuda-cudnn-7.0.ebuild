@@ -17,6 +17,8 @@ LICENSE="NVIDIA-cuDNN"
 
 S="${WORKDIR}/${PKG}"
 
+DEPENDS=">=dev-util/nvidia-cuda-toolkit-7.0"
+
 pkg_nofetch() {
 	einfo "Please download"
 	einfo "  - ${SRC_URI}"
