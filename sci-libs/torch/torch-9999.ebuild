@@ -14,7 +14,7 @@ inherit git-r3
 LICENSE="BSD3"
 SLOT="0"
 KEYWORDS=""
-IUSE="minimal cuda cudnn"
+IUSE="minimal cuda cudnn opencl"
 
 inherit cmake-utils
 
@@ -23,6 +23,7 @@ DEPEND=">=dev-lang/lua-5.1:=
 dev-lang/luajit:2
 virtual/blas
 virtual/lapack
+dev-lua/luafilesystem
 dev-lua/penlight
 dev-lua/lua-cjson
 =dev-lua/torch-cwrap-9999
@@ -39,9 +40,14 @@ RDEPEND="${DEPEND}
 )
 cuda? (
 		=sci-libs/torch-cutorch-9999
+		=sci-libs/torch-cunn-9999
 )
 cudnn? (
 		=sci-libs/torch-cudnn-9999
+)
+opencl? (
+		=sci-libs/torch-cltorch-9999
+		=sci-libs/torch-clnn-9999
 )"
 
 REQUIRED_USE="cudnn? ( cuda )"
