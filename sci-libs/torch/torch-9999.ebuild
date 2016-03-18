@@ -35,6 +35,7 @@ RDEPEND="${DEPEND}
 		=sci-libs/torch-nn-9999
 		=sci-libs/torch-xlua-9999
 		=sci-libs/torch-dok-9999
+		=sci-libs/torch-optim-9999
 )
 cudnn? (
 		=sci-libs/torch-cudnn-9999
