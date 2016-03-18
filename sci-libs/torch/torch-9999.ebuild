@@ -14,7 +14,7 @@ inherit git-r3
 LICENSE="BSD3"
 SLOT="0"
 KEYWORDS=""
-IUSE="minimal cuda"
+IUSE="minimal cuda cudnn"
 
 inherit cmake-utils
 
@@ -27,17 +27,21 @@ dev-lua/penlight
 dev-lua/lua-cjson
 =dev-lua/torch-cwrap-9999
 =dev-lua/torch-paths-9999
+sys-devel/gcc[fortran]"
+RDEPEND="${DEPEND}
 !minimal? (
 		=sci-libs/torch-image-9999
 		=sci-libs/torch-sys-9999
 		=sci-libs/torch-nn-9999
 		=sci-libs/torch-xlua-9999
+		=sci-libs/torch-dok-9999
+		=sci-libs/torch-optim-9999
 )
-cuda? (
+cudnn? (
 		=sci-libs/torch-cudnn-9999
-)
-sys-devel/gcc[fortran]"
-RDEPEND="${DEPEND}"
+)"
+
+REQUIRED_USE="cudnn? ( cuda )"
 
 src_configure() {
 	local mycmakeargs=(

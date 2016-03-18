@@ -4,10 +4,10 @@
 
 EAPI=5
 
-DESCRIPTION="Torch module for various Lua extensions."
-HOMEPAGE="https://github.com/torch/xlua"
+DESCRIPTION="Torch module."
+HOMEPAGE="https://github.com/torch/dok"
 
-EGIT_REPO_URI="https://github.com/torch/xlua.git"
+EGIT_REPO_URI="https://github.com/torch/dok.git"
 
 inherit git-r3
 
