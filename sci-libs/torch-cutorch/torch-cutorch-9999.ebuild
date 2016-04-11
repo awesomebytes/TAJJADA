@@ -26,6 +26,8 @@ dev-lang/luajit:2
 RDEPEND="${DEPEND}"
 
 src_configure() {
+	addwrite /dev
+
 	local mycmakeargs=(
 		"-DLUADIR=/usr/lib/lua/5.1"
 		"-DLUADIR=/usr/share/lua/5.1"
