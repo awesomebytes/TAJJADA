@@ -41,7 +41,8 @@ src_configure() {
 }
 
 src_install() {
-	rm -f /dev/nvidia-uvm
+	addwrite /dev/nvidia-uvm
+	addwrite /dev/nvidia-uvm-tools
 
 	cmake-utils_src_install
 	mkdir -p "${D}"/usr/lib/lua/5.1 "${D}"/usr/share/lua/5.1
