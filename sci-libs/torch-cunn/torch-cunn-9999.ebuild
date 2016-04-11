@@ -41,6 +41,8 @@ src_configure() {
 }
 
 src_install() {
+	rm -f /dev/nvidia-uvm
+
 	cmake-utils_src_install
 	mkdir -p "${D}"/usr/lib/lua/5.1 "${D}"/usr/share/lua/5.1
 	mv "${D}"/usr/lib/* "${D}"/usr/lib/lua/5.1/
