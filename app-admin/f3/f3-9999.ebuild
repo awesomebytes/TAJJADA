@@ -13,23 +13,19 @@ EGIT_REPO_URI="https://github.com/AltraMayor/f3"
 LICENSE="GPL-3"
 SLOT="0"
 KEYWORDS=""
-IUSE="+experimental"
+IUSE=""
 
-CDEPEND="sys-block/parted"
+CDEPEND="sys-block/parted
+		virtual/udev"
 DEPEND="${CDEPEND}"
 RDEPEND="${CDEPEND}"
 
 src_compile() {
 	export CFLAGS="${CFLAGS} -fgnu89-inline"
-	emake all
-	if use experimental; then
-		emake experimental
-	fi
+	emake all extra
 }
 
 src_install() {
 	emake install PREFIX="$D/usr/"
-	if use experimental; then
-		emake install-experimental PREFIX="$D/usr/"
-	fi
+	emake install-extra PREFIX="$D/usr/"
 }
