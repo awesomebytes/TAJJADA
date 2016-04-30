@@ -53,3 +53,11 @@ src_configure() {
 
 	cmake-utils_src_configure
 }
+
+src_install() {
+	cmake-utils_src_install
+	if !use systemd
+	then
+		chmod a+s /usr/bin/sway
+	fi
+}
