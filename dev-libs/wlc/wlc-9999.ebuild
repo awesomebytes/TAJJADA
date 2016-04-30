@@ -16,7 +16,15 @@ SLOT="0"
 KEYWORDS=""
 IUSE=""
 
-CDEPEND=""
+CDEPEND="virtual/opengl
+		x11-libs/libdrm
+		x11-libs/pixman
+		x11-libs/xcb-util-image
+		x11-libs/xcb-util-wm
+		dev-libs/wayland
+		dev-libs/wayland-protocols
+		x11-libs/libxkbcommon
+		dev-libs/libinput"
 DEPEND="${CDEPEND} dev-util/cmake"
 RDEPEND="${CDEPEND}"
 
