@@ -58,6 +58,6 @@ src_install() {
 	cmake-utils_src_install
 	if !use systemd
 	then
-		chmod a+s /usr/bin/sway
+		chmod a+s "${D}"/usr/bin/sway
 	fi
 }
