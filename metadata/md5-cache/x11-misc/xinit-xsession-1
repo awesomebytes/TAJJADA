@@ -1,9 +1,0 @@
-DEFINED_PHASES=install
-DESCRIPTION=Allow running ~/.xinitrc as a X session from display manager.
-EAPI=5
-HOMEPAGE=https://aur.archlinux.org/packages/xinit-xsession/
-KEYWORDS=~amd64
-SLOT=0
-SRC_URI=https://aur.archlinux.org/cgit/aur.git/snapshot/xinit-xsession.tar.gz
-_eclass_exported_funcs=src_install:-
-_md5_=0ffcda12825658841222a444414d0e5d
