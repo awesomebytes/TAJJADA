@@ -11,29 +11,28 @@ SRC_URI="https://github.com/SirCmpwn/sway/archive/${PV}.tar.gz"
 
 LICENSE="MIT"
 SLOT="0"
-KEYWORDS="~x86 ~amd64"
+KEYWORDS=""
 IUSE="swaylock swaybg swaybar swaygrab swaymsg gdk-pixbuf zsh-completion wallpaper imagemagick ffmpeg systemd"
 
 REQUIRED_USE="swaygrab? ( || ( imagemagick ffmpeg ) )"
 
-CDEPEND="dev-libs/wlc
+GUI_UTIL_DEPEND="x11-libs/pango x11-libs/cairo"
+
+RDEPEND="dev-libs/wlc
 		dev-libs/json-c
-		swaybg? ( swaybar? ( swaylock? (
-				x11-libs/pango
-				x11-libs/cairo
-				) ) )
-		swaylock? ( virtual/pam )
-		gdk-pixbuf? ( x11-libs/gdk-pixbuf )
+		swaybg? ( ${GUI_UTIL_DEPEND} )
+		swaybar? ( ${GUI_UTIL_DEPEND} )
+		swaylock? ( ${GUI_UTIL_DEPEND} virtual/pam )
+		gdk-pixbuf? ( x11-libs/gdk-pixbuf[jpeg] )
 		dev-libs/wayland
 		dev-libs/libpcre
 		x11-base/xorg-server[wayland]
-		imagemagick? ( media-gfx/imagemagick )
+		imagemagick? ( media-gfx/imagemagick[png,raw] )
 		ffmpeg? ( virtual/ffmpeg )
 		systemd? ( dev-libs/wlc[systemd] sys-apps/systemd )"
-DEPEND="${CDEPEND}
-		dev-util/cmake
+
+DEPEND="${RDEPEND}
 		app-text/asciidoc"
-RDEPEND="${CDEPEND}"
 
 inherit cmake-utils
 
@@ -47,6 +46,8 @@ src_configure() {
 		`cmake-utils_use gdk-pixbuf enable-gdk-pixbuf`
 		`cmake-utils_use zsh-completion zsh-completions`
 		`cmake-utils_use wallpaper default-wallpaper`
+
+		-DCMAKE_INSTALL_SYSCONFDIR="/etc"
 	)
 
 	cmake-utils_src_configure
@@ -54,10 +55,6 @@ src_configure() {
 
 src_install() {
 	cmake-utils_src_install
-	if use systemd
-	then
-		chmod a-s "${D}"/usr/bin/sway
-	else
-		chmod a+s "${D}"/usr/bin/sway
-	fi
+
+	use !systemd && fperms u+s /usr/bin/sway
 }
