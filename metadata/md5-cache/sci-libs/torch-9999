@@ -1,0 +1,13 @@
+DEFINED_PHASES=compile configure install prepare test unpack
+DEPEND=>=dev-lang/lua-5.1:= dev-lang/luajit:2 virtual/blas virtual/lapack dev-lua/luafilesystem dev-lua/penlight dev-lua/lua-cjson =dev-lua/torch-cwrap-9999 =dev-lua/torch-paths-9999 sys-devel/gcc[fortran] >=dev-vcs/git-1.8.2.1 sys-devel/make >=dev-util/cmake-2.8.12
+DESCRIPTION=Torch is a Lua-based suite for scientific computations based on multidimensional tensors.
+EAPI=5
+HOMEPAGE=https://github.com/torch/torch7
+IUSE=minimal cuda cudnn opencl
+LICENSE=BSD3
+RDEPEND=>=dev-lang/lua-5.1:= dev-lang/luajit:2 virtual/blas virtual/lapack dev-lua/luafilesystem dev-lua/penlight dev-lua/lua-cjson =dev-lua/torch-cwrap-9999 =dev-lua/torch-paths-9999 sys-devel/gcc[fortran] !minimal? ( =sci-libs/torch-image-9999 =sci-libs/torch-sys-9999 =sci-libs/torch-nn-9999 =sci-libs/torch-xlua-9999 =sci-libs/torch-dok-9999 =sci-libs/torch-optim-9999 ) cuda? ( =sci-libs/torch-cutorch-9999 =sci-libs/torch-cunn-9999 ) cudnn? ( =sci-libs/torch-cudnn-9999 ) opencl? ( =sci-libs/torch-cltorch-9999 =sci-libs/torch-clnn-9999 )
+REQUIRED_USE=cudnn? ( cuda )
+SLOT=0
+_eclass_exported_funcs=src_unpack:git-r3 src_prepare:cmake-utils src_configure:- src_compile:cmake-utils src_test:cmake-utils src_install:cmake-utils
+_eclasses_=cmake-utils	422bbd1bee2557490177a34dbe0a662b	eutils	792f83d5ec9536cb5ccef375469d8bde	flag-o-matic	d270fa247153df66074f795fa42dba3e	git-r3	ef66dfc3db09f327af21cf32f140fb2b	multilib	23ae8c186171e6476af098d2a50d0ee0	toolchain-funcs	d513d423d449877e49d99af3f7af7acb	versionator	99ae9d758cbe7cfed19170e7d48f5a9c
+_md5_=e1ffa9f8620f32fd3795fc136536bb8d
