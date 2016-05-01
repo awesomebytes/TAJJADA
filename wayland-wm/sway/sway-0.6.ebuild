@@ -30,8 +30,8 @@ RDEPEND="dev-libs/wlc
 		dev-libs/wayland
 		dev-libs/libpcre
 		x11-base/xorg-server[wayland]
-		imagemagick? ( media-gfx/imagemagick[png,raw] )
-		ffmpeg? ( virtual/ffmpeg )
+		imagemagick? ( media-gfx/imagemagick[png] )
+		ffmpeg? ( media-video/ffmpeg )
 		systemd? ( dev-libs/wlc[systemd] sys-apps/systemd )"
 
 DEPEND="${RDEPEND}
