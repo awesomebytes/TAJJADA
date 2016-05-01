@@ -4,6 +4,9 @@
 
 EAPI=5
 
+inherit git-r3 cmake-utils
+
+
 DESCRIPTION="A Wayland-based replacement for the i3 window manager."
 HOMEPAGE="https://github.com/SirCmpwn/sway"
 
@@ -33,8 +36,6 @@ RDEPEND="dev-libs/wlc
 
 DEPEND="${RDEPEND}
 		app-text/asciidoc"
-
-inherit git-r3 cmake-utils
 
 src_configure() {
 	mycmakeargs+=(
