@@ -8,7 +8,7 @@ dev-embedded/ino 9999: Commandline utilities for Arduino development.
 dev-embedded/u-boot-tools 2015.07: utilities for working with Das U-Boot
 dev-libs/flog 0.1.1.1: The Flexible/Functional Message Logging Library for C
 dev-libs/nvidia-cuda-cudnn 7.0: NVIDIA cuDNN GPU Accelerated Deep Learning
-dev-libs/wlc 9999: A helper library for Wayland compositors.
+dev-libs/wlc 0.0.2 9999: A helper library for Wayland compositors.
 dev-lua/torch-cwrap 9999: cwrap helps generate Lua/C wrappers to interface with C functions.
 dev-lua/torch-paths 9999: Paths manipulation library for Lua.
 dev-python/glob2 9999: Extended version of Python's builtin glob module.
