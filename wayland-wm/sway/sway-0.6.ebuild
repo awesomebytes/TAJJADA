@@ -8,7 +8,7 @@ inherit cmake-utils
 
 
 DESCRIPTION="A Wayland-based replacement for the i3 window manager."
-HOMEPAGE="https://github.com/SirCmpwn/sway"
+HOMEPAGE="http://swaywm.org/"
 
 SRC_URI="https://github.com/SirCmpwn/sway/archive/${PV}.tar.gz"
 
