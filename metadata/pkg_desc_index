@@ -29,4 +29,4 @@ sci-misc/trepl 9999: TREPL is a command-line REPL for Torch.
 www-client/chromium 44.0.2403.89: Open-source version of Google Chrome web browser
 x11-drivers/l4t-drivers 21.4.0: NVIDIA Linux4Tegra Graphics Drivers (for Tegra K1 SoC).
 x11-misc/xinit-xsession 1: Allow running ~/.xinitrc as a X session from display manager.
-x11-wm/sway 9999: A Wayland-based replacement for the i3 window manager.
+x11-wm/sway 0.6 9999: A Wayland-based replacement for the i3 window manager.
