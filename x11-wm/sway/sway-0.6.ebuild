@@ -11,7 +11,7 @@ SRC_URI="https://github.com/SirCmpwn/sway/archive/0.6.tar.gz"
 
 LICENSE="MIT"
 SLOT="0"
-KEYWORDS=""
+KEYWORDS="~x86 ~amd64"
 IUSE="swaylock swaybg swaybar swaygrab swaymsg gdk-pixbuf zsh-completion wallpaper imagemagick ffmpeg systemd"
 
 REQUIRED_USE="swaygrab? ( || ( imagemagick ffmpeg ) )"
