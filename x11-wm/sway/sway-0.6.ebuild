@@ -7,7 +7,7 @@ EAPI=5
 DESCRIPTION="A Wayland-based replacement for the i3 window manager."
 HOMEPAGE="https://github.com/SirCmpwn/sway"
 
-SRC_URI="https://github.com/SirCmpwn/sway/archive/0.6.tar.gz"
+SRC_URI="https://github.com/SirCmpwn/sway/archive/${PV}.tar.gz"
 
 LICENSE="MIT"
 SLOT="0"
