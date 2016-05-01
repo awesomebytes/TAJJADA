@@ -4,6 +4,9 @@
 
 EAPI=5
 
+inherit cmake-utils multilib
+
+
 DESCRIPTION="A helper library for Wayland compositors."
 HOMEPAGE="https://github.com/Cloudef/wlc"
 
@@ -11,10 +14,10 @@ SRC_URI="https://github.com/Cloudef/wlc/releases/download/v${PV}/${P}.tar.bz2"
 
 LICENSE="MIT"
 SLOT="0"
-KEYWORDS="~x86 ~amd64"
+KEYWORDS="~amd64 ~x86"
 IUSE="systemd"
 
-CDEPEND="virtual/opengl
+RDEPEND="virtual/opengl
 		media-libs/mesa[gbm,gles2,egl]
 		x11-libs/libdrm
 		x11-libs/pixman
@@ -28,7 +31,6 @@ CDEPEND="virtual/opengl
 		x11-libs/libxkbcommon
 		dev-libs/libinput
 		systemd? ( sys-apps/systemd sys-apps/dbus )"
-DEPEND="${CDEPEND} dev-util/cmake"
-RDEPEND="${CDEPEND}"
 
-inherit cmake-utils multilib
+DEPEND="${RDEPEND}"
+

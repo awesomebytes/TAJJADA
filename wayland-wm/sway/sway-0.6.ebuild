@@ -4,14 +4,17 @@
 
 EAPI=5
 
+inherit cmake-utils
+
+
 DESCRIPTION="A Wayland-based replacement for the i3 window manager."
-HOMEPAGE="https://github.com/SirCmpwn/sway"
+HOMEPAGE="http://swaywm.org/"
 
 SRC_URI="https://github.com/SirCmpwn/sway/archive/${PV}.tar.gz"
 
 LICENSE="MIT"
 SLOT="0"
-KEYWORDS=""
+KEYWORDS="~x86 ~amd64"
 IUSE="swaylock swaybg swaybar swaygrab swaymsg gdk-pixbuf zsh-completion wallpaper imagemagick ffmpeg systemd"
 
 REQUIRED_USE="swaygrab? ( || ( imagemagick ffmpeg ) )"
@@ -33,8 +36,6 @@ RDEPEND="dev-libs/wlc
 
 DEPEND="${RDEPEND}
 		app-text/asciidoc"
-
-inherit cmake-utils
 
 src_configure() {
 	mycmakeargs+=(
