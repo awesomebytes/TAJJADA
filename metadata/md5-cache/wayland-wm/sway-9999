@@ -2,7 +2,7 @@ DEFINED_PHASES=compile configure install prepare test unpack
 DEPEND=dev-libs/wlc dev-libs/json-c swaybg? ( x11-libs/pango x11-libs/cairo ) swaybar? ( x11-libs/pango x11-libs/cairo ) swaylock? ( x11-libs/pango x11-libs/cairo virtual/pam ) gdk-pixbuf? ( x11-libs/gdk-pixbuf[jpeg] ) dev-libs/wayland dev-libs/libpcre x11-base/xorg-server[wayland] imagemagick? ( media-gfx/imagemagick[png,raw] ) ffmpeg? ( virtual/ffmpeg ) systemd? ( dev-libs/wlc[systemd] sys-apps/systemd ) app-text/asciidoc >=dev-vcs/git-1.8.2.1 sys-devel/make >=dev-util/cmake-2.8.12
 DESCRIPTION=A Wayland-based replacement for the i3 window manager.
 EAPI=5
-HOMEPAGE=https://github.com/SirCmpwn/sway
+HOMEPAGE=http://swaywm.org/
 IUSE=swaylock swaybg swaybar swaygrab swaymsg gdk-pixbuf zsh-completion wallpaper imagemagick ffmpeg systemd
 LICENSE=MIT
 RDEPEND=dev-libs/wlc dev-libs/json-c swaybg? ( x11-libs/pango x11-libs/cairo ) swaybar? ( x11-libs/pango x11-libs/cairo ) swaylock? ( x11-libs/pango x11-libs/cairo virtual/pam ) gdk-pixbuf? ( x11-libs/gdk-pixbuf[jpeg] ) dev-libs/wayland dev-libs/libpcre x11-base/xorg-server[wayland] imagemagick? ( media-gfx/imagemagick[png,raw] ) ffmpeg? ( virtual/ffmpeg ) systemd? ( dev-libs/wlc[systemd] sys-apps/systemd )
@@ -10,4 +10,4 @@ REQUIRED_USE=swaygrab? ( || ( imagemagick ffmpeg ) )
 SLOT=0
 _eclass_exported_funcs=src_unpack:git-r3 src_prepare:cmake-utils src_configure:- src_compile:cmake-utils src_test:cmake-utils src_install:-
 _eclasses_=cmake-utils	422bbd1bee2557490177a34dbe0a662b	eutils	792f83d5ec9536cb5ccef375469d8bde	flag-o-matic	d270fa247153df66074f795fa42dba3e	git-r3	ef66dfc3db09f327af21cf32f140fb2b	multilib	23ae8c186171e6476af098d2a50d0ee0	toolchain-funcs	d513d423d449877e49d99af3f7af7acb	versionator	99ae9d758cbe7cfed19170e7d48f5a9c
-_md5_=779997917124a25fe44f4560ea92b46a
+_md5_=2e0286f9447428dddd8efd0ebdf33ed9
