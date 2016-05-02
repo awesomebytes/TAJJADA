@@ -6,7 +6,6 @@ EAPI=5
 
 inherit cmake-utils
 
-
 DESCRIPTION="A Wayland-based replacement for the i3 window manager."
 HOMEPAGE="http://swaywm.org/"
 

@@ -6,7 +6,6 @@ EAPI=5
 
 inherit cmake-utils multilib
 
-
 DESCRIPTION="A helper library for Wayland compositors."
 HOMEPAGE="https://github.com/Cloudef/wlc"
 
@@ -33,4 +32,3 @@ RDEPEND="virtual/opengl
 		systemd? ( sys-apps/systemd sys-apps/dbus )"
 
 DEPEND="${RDEPEND}"
-

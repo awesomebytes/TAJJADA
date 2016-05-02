@@ -24,9 +24,3 @@ You can now add it like any other overlay from there:
 layman -a TAJJADA
 ```
 
-## Documentation
-
-See the `CONTENTS.md` file for various notes regarding each ebuild in the
-overlay, including my reasons for creating it, important differences from
-other similar ebuilds in other overlays/gentoo, and other information.
-
