@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
+<pkgmetadata>
+	<maintainer type="person">
+		<email>tajjada@gmail.com</email>
+		<name>Jasen Borisov</name>
+	</maintainer>
+	<longdescription lang="en">
+		fsltag is a script for managing collections of files or directories using tags. Unlike other programs, it does not use any special file format, but uses the filesystem itself to store the information. This makes it non-intrusive, and able to work with any arbitrary files.
+
+		It works by creating a master directory, where all the files are stored, and then creating additional directories for each tag, containing symlinks to the appropriate files. This allows you to organise your collection of files into a neat directory structure, accessible and manageable using any other program.
+	</longdescription>
+</pkgmetadata>
