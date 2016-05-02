@@ -8,12 +8,13 @@ inherit git-r3
 
 DESCRIPTION="Fight Flash Fraud, or Fight Fake Flash"
 HOMEPAGE="http://oss.digirati.com.br/f3/"
+
 EGIT_REPO_URI="https://github.com/AltraMayor/f3"
 
 LICENSE="GPL-3"
 SLOT="0"
 KEYWORDS=""
-IUSE=""
+IUSE="+extras"
 
 CDEPEND="sys-block/parted
 		virtual/udev"
@@ -22,10 +23,11 @@ RDEPEND="${CDEPEND}"
 
 src_compile() {
 	export CFLAGS="${CFLAGS} -fgnu89-inline"
-	emake all extra
+	emake all
+	use extras && emake extra
 }
 
 src_install() {
 	emake install PREFIX="$D/usr/"
-	emake install-extra PREFIX="$D/usr/"
+	use extras && emake install-extra PREFIX="$D/usr/"
 }
