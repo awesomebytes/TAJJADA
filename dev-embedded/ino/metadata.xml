@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
+<pkgmetadata>
+	<maintainer type="person">
+		<email>tajjada@gmail.com</email>
+		<name>Jasen Borisov</name>
+	</maintainer>
+	<longdescription lang="en">
+		ino is a commandline tool for Arduino development, that allows one to use any text editor and a standard Makefile-based build system for writing Arduino programs, instead of the official Java-based GUI Arduino IDE.
+
+		ino has been unmaintained for years, and does not support the latest official Arduino libraries and software. Please use Arturo/ano (a fork of ino to continue development) instead.
+	</longdescription>
+</pkgmetadata>
