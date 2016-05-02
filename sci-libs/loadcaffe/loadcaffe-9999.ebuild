@@ -4,21 +4,17 @@
 
 EAPI=5
 
+inherit git-r3 cmake-utils
+
 DESCRIPTION="cwrap helps generate Lua/C wrappers to interface with C functions."
 HOMEPAGE="https://github.com/szagoruyko/loadcaffe"
-
 EGIT_REPO_URI="https://github.com/szagoruyko/loadcaffe.git"
-
-inherit git-r3
 
 LICENSE="BSD2"
 SLOT="0"
 KEYWORDS=""
 IUSE=""
 
-inherit cmake-utils
-
-#FIXME: currently hard-code lua 5.1
 DEPEND=">=dev-lang/lua-5.1:=
 dev-lang/luajit:2
 dev-libs/protobuf"

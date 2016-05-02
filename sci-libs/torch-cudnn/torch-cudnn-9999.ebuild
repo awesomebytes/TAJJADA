@@ -4,21 +4,17 @@
 
 EAPI=5
 
+inherit git-r3 cmake-utils
+
 DESCRIPTION="Torch FFI bindings for nvidia-cuda-cudnn."
 HOMEPAGE="https://github.com/soumith/cudnn.torch"
-
 EGIT_REPO_URI="https://github.com/soumith/cudnn.torch.git"
-
-inherit git-r3
 
 LICENSE="BSD3"
 SLOT="0"
 KEYWORDS=""
 IUSE=""
 
-inherit cmake-utils
-
-#FIXME: currently hard-code lua 5.1
 DEPEND=">=dev-lang/lua-5.1:=
 dev-lang/luajit:2
 =sci-libs/torch-9999
@@ -48,5 +44,3 @@ src_install() {
 	mv "${D}"/usr/lua/* "${D}"/usr/share/lua/5.1/
 	rm -rf "${D}"/usr/lua
 }
-
-

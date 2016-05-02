@@ -4,21 +4,17 @@
 
 EAPI=5
 
+inherit git-r3 cmake-utils
+
 DESCRIPTION="Paths manipulation library for Lua."
 HOMEPAGE="https://github.com/torch/paths"
-
 EGIT_REPO_URI="https://github.com/torch/paths.git"
-
-inherit git-r3
 
 LICENSE="BSD3"
 SLOT="0"
 KEYWORDS=""
 IUSE=""
 
-inherit cmake-utils
-
-#FIXME: currently hard-code lua 5.1
 DEPEND=">=dev-lang/lua-5.1:=
 dev-lang/luajit:2"
 RDEPEND="${DEPEND}"

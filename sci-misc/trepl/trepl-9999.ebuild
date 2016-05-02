@@ -4,19 +4,17 @@
 
 EAPI=5
 
+inherit git-r3
+
 DESCRIPTION="TREPL is a command-line REPL for Torch."
 HOMEPAGE="https://github.com/torch/trepl"
-
 EGIT_REPO_URI="https://github.com/torch/trepl.git"
-
-inherit git-r3
 
 LICENSE="BSD3"
 SLOT="0"
 KEYWORDS=""
 IUSE=""
 
-#FIXME: currently hard-code lua 5.1
 DEPEND=">=dev-lang/lua-5.1:=
 dev-lang/luajit:2
 sys-libs/readline

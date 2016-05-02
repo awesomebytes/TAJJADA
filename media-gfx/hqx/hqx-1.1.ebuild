@@ -16,7 +16,11 @@ IUSE=""
 DEPEND="media-libs/devil"
 RDEPEND="${DEPEND}"
 
-src_compile () {
-		export MAKEOPTS="-j1"
+src_compile() {
+		# needed to work around a makefile dependency bug
+		# ideally, the makefile should be patched,
+		# but i can't be bothered to do that
+		export MAKEOPTS="-j1" 
+
 		emake all
 }

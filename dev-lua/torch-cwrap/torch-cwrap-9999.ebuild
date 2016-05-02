@@ -4,21 +4,18 @@
 
 EAPI=5
 
+inherit cmake-utils git-r3
+
 DESCRIPTION="cwrap helps generate Lua/C wrappers to interface with C functions."
 HOMEPAGE="https://github.com/torch/cwrap"
 
 EGIT_REPO_URI="https://github.com/torch/cwrap.git"
-
-inherit git-r3
 
 LICENSE="BSD2"
 SLOT="0"
 KEYWORDS=""
 IUSE=""
 
-inherit cmake-utils
-
-#FIXME: currently hard-code lua 5.1
 DEPEND=">=dev-lang/lua-5.1:=
 dev-lang/luajit:2"
 RDEPEND="${DEPEND}"

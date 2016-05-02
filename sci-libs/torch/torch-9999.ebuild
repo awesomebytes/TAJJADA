@@ -4,21 +4,17 @@
 
 EAPI=5
 
+inherit git-r3 cmake-utils
+
 DESCRIPTION="Torch is a Lua-based suite for scientific computations based on multidimensional tensors."
 HOMEPAGE="https://github.com/torch/torch7"
-
 EGIT_REPO_URI="https://github.com/torch/torch7.git"
-
-inherit git-r3
 
 LICENSE="BSD3"
 SLOT="0"
 KEYWORDS=""
 IUSE="minimal cuda cudnn opencl"
 
-inherit cmake-utils
-
-#FIXME: currently hard-code lua 5.1
 DEPEND=">=dev-lang/lua-5.1:=
 dev-lang/luajit:2
 virtual/blas
@@ -66,6 +62,3 @@ src_configure() {
 
 	cmake-utils_src_configure
 }
-
-
-
