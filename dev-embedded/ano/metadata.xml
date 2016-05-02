@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
+<pkgmetadata>
+	<maintainer type="person">
+		<email>tajjada@gmail.com</email>
+		<name>Jasen Borisov</name>
+	</maintainer>
+	<longdescription lang="en">
+		Arturo/ano is a commandline tool for Arduino development, that allows one to use any text editor and a standard Makefile-based build system for writing Arduino programs, instead of the official Java-based GUI Arduino IDE.
+
+		Arturo/ano is a fork of ino (which is now a discontinued / unmaintained project), which aims to continue its development, and is updated to support the latest official Arduino libraries and software.
+	</longdescription>
+</pkgmetadata>
