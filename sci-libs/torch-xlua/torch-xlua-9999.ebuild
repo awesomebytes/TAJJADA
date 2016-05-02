@@ -4,21 +4,18 @@
 
 EAPI=5
 
+inherit git-r3 cmake-utils
+
 DESCRIPTION="Torch module for various Lua extensions."
 HOMEPAGE="https://github.com/torch/xlua"
 
 EGIT_REPO_URI="https://github.com/torch/xlua.git"
-
-inherit git-r3
 
 LICENSE="BSD3"
 SLOT="0"
 KEYWORDS=""
 IUSE=""
 
-inherit cmake-utils
-
-#FIXME: currently hard-code lua 5.1
 DEPEND=">=dev-lang/lua-5.1:=
 dev-lang/luajit:2
 =sci-libs/torch-9999"
@@ -46,4 +43,3 @@ src_install() {
 	mv "${D}"/usr/lua/* "${D}"/usr/share/lua/5.1/
 	rm -rf "${D}"/usr/lua
 }
-
