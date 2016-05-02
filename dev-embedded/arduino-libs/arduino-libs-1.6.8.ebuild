@@ -9,7 +9,7 @@ inherit eutils
 MY_P="Arduino"
 DESCRIPTION="An open-source AVR electronics prototyping platform"
 HOMEPAGE="http://arduino.cc/ https://arduino.googlecode.com/"
-SRC_URI="https://github.com/arduino/${MY_P}/archive/${PV}.tar.gz -> ${P}.tar.gz"
+SRC_URI="https://github.com/arduino/${MY_P}/archive/${PV}.tar.gz -> arduino-${PV}.tar.gz"
 LICENSE="GPL-2 GPL-2+ LGPL-2 CC-BY-SA-3.0"
 SLOT="0"
 KEYWORDS="~amd64 ~x86"
