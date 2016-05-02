@@ -21,7 +21,7 @@ REQUIRED_USE="swaygrab? ( || ( imagemagick ffmpeg ) )"
 
 GUI_UTIL_DEPEND="x11-libs/pango x11-libs/cairo"
 
-RDEPEND="dev-libs/wlc
+RDEPEND="=dev-libs/wlc-9999
 		dev-libs/json-c
 		swaybg? ( ${GUI_UTIL_DEPEND} )
 		swaybar? ( ${GUI_UTIL_DEPEND} )
@@ -32,7 +32,7 @@ RDEPEND="dev-libs/wlc
 		x11-base/xorg-server[wayland]
 		imagemagick? ( media-gfx/imagemagick[png] )
 		ffmpeg? ( media-video/ffmpeg )
-		systemd? ( dev-libs/wlc[systemd] sys-apps/systemd )"
+		systemd? ( =dev-libs/wlc-9999[systemd] sys-apps/systemd )"
 
 DEPEND="${RDEPEND}
 		app-text/asciidoc"
