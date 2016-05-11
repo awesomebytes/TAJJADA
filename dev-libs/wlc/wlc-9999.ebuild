@@ -2,7 +2,7 @@
 # Distributed under the terms of the GNU General Public License v2
 # $Id$
 
-EAPI=5
+EAPI=6
 
 inherit git-r3 cmake-utils
 
@@ -23,7 +23,6 @@ RDEPEND="virtual/opengl
 		x11-libs/libxkbcommon
 		dev-libs/libinput
 		dev-libs/wayland
-		dev-libs/wayland-protocols
 		X? ( x11-libs/libX11
 			 x11-libs/libxcb
 			 x11-libs/xcb-util-image
@@ -31,14 +30,15 @@ RDEPEND="virtual/opengl
 			 x11-libs/libXfixes )
 		systemd? ( sys-apps/systemd sys-apps/dbus )"
 
-DEPEND="${RDEPEND}"
+DEPEND="${RDEPEND}
+		dev-libs/wayland-protocols"
 
 src_configure() {
 	local mycmakeargs=(
 		-DWLC_BUILD_EXAMPLES=OFF
 		-DWLC_BUILD_TESTS=OFF
 
-		$(cmake-utils_use static-libs WLC_BUILD_STATIC)
+		-DWLC_BUILD_STATIC=$(usex static-libs)
 
 		$(cmake-utils_use_find_package systemd Systemd)
 		$(cmake-utils_use_find_package systemd Dbus)
