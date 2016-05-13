@@ -2,13 +2,3 @@
 # Please add your descriptions to your package's metadata.xml ONLY.
 # * generated automatically using pmaint *
 
-wayland-wm/sway:X - Enable X11 backend and XWayland support.
-wayland-wm/sway:ffmpeg - Enable screencast (video grab) support in swaygrab, using ffmpeg.
-wayland-wm/sway:gdk-pixbuf - Enable additional image format support via the gdk-pixbuf library.
-wayland-wm/sway:imagemagick - Enable screenshot support in swaygrab, using imagemagick.
-wayland-wm/sway:swaybar - Build 'swaybar': sway's status bar component.
-wayland-wm/sway:swaybg - Build 'swaybg': allows to set a desktop background image.
-wayland-wm/sway:swaygrab - Build 'swaygrab': allows taking screenshots or screencasts.
-wayland-wm/sway:swaylock - Build 'swaylock': sway's screen locker.
-wayland-wm/sway:swaymsg - Build 'swaymsg': tool for communicating with a running sway instance.
-wayland-wm/sway:wallpaper - Install sway's default wallpaper image.
