@@ -18,3 +18,6 @@ IUSE=""
 DEPEND="x11-libs/gtk+:3"
 RDEPEND="${DEPEND}"
 
+src_install() {
+	emake prefix="${D}/usr" install
+}
