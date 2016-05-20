@@ -17,7 +17,7 @@ IUSE=""
 
 DEPEND=">=dev-lang/lua-5.1:=
 dev-lang/luajit:2
-=sci-libs/torch-9999
+=sci-libs/torch7-9999
 >=dev-libs/nvidia-cuda-cudnn-7.0"
 RDEPEND="${DEPEND}"
 
