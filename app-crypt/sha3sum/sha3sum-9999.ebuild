@@ -15,7 +15,7 @@ SLOT="0"
 KEYWORDS=""
 IUSE=""
 
-DEPEND="dev-libs/libkeccak dev-libs/argparse"
+DEPEND="dev-libs/libkeccak dev-libs/argparser"
 RDEPEND="${DEPEND}"
 
 src_compile() {
