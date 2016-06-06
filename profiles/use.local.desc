@@ -2,3 +2,4 @@
 # Please add your descriptions to your package's metadata.xml ONLY.
 # * generated automatically using pmaint *
 
+app-admin/f3:extras - Build the f3probe, f3brew, and f3fix utilities. You almost certainly want these, but they are not supported on non-Linux kernels/systems.
