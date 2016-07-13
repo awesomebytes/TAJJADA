@@ -15,7 +15,7 @@ SLOT="0"
 KEYWORDS=""
 IUSE=""
 
-DEPEND="
+RDEPEND="
 		dev-qt/qtcore:5
 		dev-qt/qtdbus:5
 		dev-qt/qtgui:5
@@ -23,6 +23,6 @@ DEPEND="
 		dev-qt/qtx11extras:5
 		dev-libs/glib:2"
 
-RDEPEND="${DEPEND}
+DEPEND="${RDEPEND}
 		dev-qt/linguist-tools:5
 		virtual/pkgconfig"
