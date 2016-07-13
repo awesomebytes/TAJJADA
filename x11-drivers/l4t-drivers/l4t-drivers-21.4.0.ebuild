@@ -57,20 +57,26 @@ src_compile() {
 	## Move Xorg GLX module.
 	mv "${I}/usr/lib/xorg/modules/extensions" "${I}/usr/lib/opengl/linux4tegra/"
 	## Move EGL/GLES libraries.
-	mv "${I}/usr/lib/arm-linux-gnueabihf/tegra-egl" "${I}/usr/lib/"
+	rm -f "${I}/usr/lib/arm-linux-gnueabihf/tegra-egl/ld.so.conf"
+	mv "${I}"/usr/lib/arm-linux-gnueabihf/tegra-egl/* "${I}/usr/lib/opengl/linux4tegra/lib"
 	## Remove the unneeded lib directory from the binary distribution.
-	rmdir "${I}/usr/lib/arm-linux-gnueabihf/"
+	rm -rf "${I}/usr/lib/arm-linux-gnueabihf/"
 }
 
 src_install() {
 	rsync -aX "${S}/inst/" "${D}/"
 	mkdir -p "${D}/lib/udev/rules.d/"
 	cp "${WORKDIR}/${TEGRA_UDEV_RULES}" "${D}/lib/udev/rules.d/"
-	## Make symlink for libGL.so
-	ln -s "${D}/usr/lib/opengl/linux4tegra/lib/libGL.so.1" "${D}/usr/lib/opengl/linux4tegra/lib/libGL.so"
+	## Make symlinks
+	ln -s "libGL.so.1" "${D}/usr/lib/opengl/linux4tegra/lib/libGL.so"
+	ln -s "libEGL.so.1" "${D}/usr/lib/opengl/linux4tegra/lib/libEGL.so"
+	ln -s "libGLESv1_CM.so.1" "${D}/usr/lib/opengl/linux4tegra/lib/libGLESv1_CM.so"
+	ln -s "libGLESv2.so.2" "${D}/usr/lib/opengl/linux4tegra/lib/libGLESv2.so"
+	ln -s "libcuda.so.1.1" "${D}/usr/lib/opengl/linux4tegra/lib/libcuda.so.1"
+	ln -s "libcuda.so.1" "${D}/usr/lib/opengl/linux4tegra/lib/libcuda.so"
 	## Fix GLX.
-	rm "${D}/usr/lib/opengl/linux4tegra/extensions/libglx.so"
-	ln -s "${D}/usr/lib/opengl/linux4tegra/lib/libglx.so" "${D}/usr/lib/opengl/linux4tegra/extensions/libglx.so"
+	rm -f "${D}/usr/lib/opengl/linux4tegra/extensions/libglx.so"
+	ln -s "../lib/libglx.so" "${D}/usr/lib/opengl/linux4tegra/extensions/libglx.so"
 }
 
 pkg_postinst() {
