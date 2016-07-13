@@ -17,6 +17,7 @@ dev-lua/torch-paths 9999: Paths manipulation library for Lua.
 dev-python/glob2 9999: Extended version of Python's builtin glob module.
 games-fps/xonotic 0.8.1: Fork of Nexuiz, Deathmatch FPS based on DarkPlaces, an advanced Quake 1 engine
 media-gfx/hqx 1.1: hqx is a fast, high-quality magnification filter designed for pixel art.
+media-sound/lxmixer 9999: Qt5 fork of pavucontrol for the LXQt desktop environment.
 sci-libs/loadcaffe 9999: cwrap helps generate Lua/C wrappers to interface with C functions.
 sci-libs/torch-cudnn 9999: Torch FFI bindings for nvidia-cuda-cudnn.
 sci-libs/torch-cunn 9999: Torch module for CUDA Neural Networks.
