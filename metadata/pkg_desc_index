@@ -28,7 +28,7 @@ sci-libs/torch-optim 9999: Torch module for optimisations.
 sci-libs/torch-sys 9999: Torch module for system functions.
 sci-libs/torch-xlua 9999: Torch module for various Lua extensions.
 sci-libs/torch7 9999: Torch is a Lua-based suite for scientific computations based on multidimensional tensors.
-sci-misc/gringo 4.5.4: Grounding tools for (disjunctive) logic programs.
+sci-misc/clingo 9999: Answer Set Programming grounder and solver
 sci-misc/trepl 9999: TREPL is a command-line REPL for Torch.
 x11-drivers/l4t-drivers 21.4.0: NVIDIA Linux4Tegra Graphics Drivers (for Tegra K1 SoC).
 x11-misc/gtk3-nocsd 9999: A hack to disable gtk3 client-side decorations
