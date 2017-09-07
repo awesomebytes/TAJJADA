@@ -8,5 +8,4 @@ LICENSE=NVIDIA_TEGRA
 RDEPEND=app-eselect/eselect-opengl <x11-base/xorg-server-1.17.99:=
 SLOT=0
 SRC_URI=http://developer.download.nvidia.com/embedded/L4T/r21_Release_v4.0/Tegra124_Linux_R21.4.0_armhf.tbz2
-_eclass_exported_funcs=pkg_prerm:- pkg_postrm:- pkg_postinst:- src_unpack:- src_compile:- src_install:-
 _md5_=ddbaa9d6e9a484035a775c19e529168d
