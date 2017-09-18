@@ -6,5 +6,5 @@ HOMEPAGE=https://github.com/maandree/sha3sum
 LICENSE=AGPL-3
 RDEPEND=dev-libs/libkeccak dev-libs/argparser
 SLOT=0
-_eclasses_=git-r3	4f7ddb4119309845d6687213171ab445
+_eclasses_=git-r3	52a888802d25387c2c74cb845d1219bc
 _md5_=613fc75b99d8666a495633c18c17af39

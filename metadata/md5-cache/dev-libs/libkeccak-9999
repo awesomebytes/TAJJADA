@@ -5,5 +5,5 @@ EAPI=6
 HOMEPAGE=https://github.com/maandree/libkeccak
 LICENSE=AGPL-3
 SLOT=0
-_eclasses_=git-r3	4f7ddb4119309845d6687213171ab445
+_eclasses_=git-r3	52a888802d25387c2c74cb845d1219bc
 _md5_=e2cba9571a9d9687938b5c5fcefc156a
