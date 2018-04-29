@@ -50,15 +50,16 @@ REQUIRED_USE="cudnn? ( cuda )"
 
 src_configure() {
 	local mycmakeargs=(
-		"-DLUADIR=/usr/lib/lua/5.1"
-		"-DLUADIR=/usr/share/lua/5.1"
-		"-DLIBDIR=/usr/lib/lua/5.1"
-		"-DLUA_BINDIR=/usr/bin"
-		"-DLUA_INCDIR=/usr/include/luajit-2.0"
-		"-DLUA_LIBDIR=/usr/lib"
-		"-DLUALIB=/usr/lib/libluajit-5.1.so"
-		"-DLUA=/usr/bin/luajit"
+		"-DLUADIR=${EPREFIX%/}/usr/lib/lua/5.1"
+		"-DLUADIR=${EPREFIX%/}//usr/share/lua/5.1"
+		"-DLIBDIR=${EPREFIX%/}//usr/lib/lua/5.1"
+		"-DLUA_BINDIR=${EPREFIX%/}//usr/bin"
+		"-DLUA_INCDIR=${EPREFIX%/}//usr/include/luajit-2.0"
+		"-DLUA_LIBDIR=${EPREFIX%/}//usr/lib"
+		"-DLUALIB=${EPREFIX%/}//usr/lib/libluajit-5.1.so"
+		"-DLUA=${EPREFIX%/}//usr/bin/luajit"
 	)
 
 	cmake-utils_src_configure
 }
+
